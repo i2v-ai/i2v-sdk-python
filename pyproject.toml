@@ -23,8 +23,8 @@ dependencies = []
 
 [project.urls]
 Homepage = "https://i2v.ai"
-Documentation = "https://i2v.ai/docs"
-Source = "https://github.com/i2v-ai/i2v-agent-tools"
+Documentation = "https://i2v.ai/docs/integration"
+Source = "https://github.com/i2v-ai/i2v-sdk-python"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
