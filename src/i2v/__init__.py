@@ -10,6 +10,13 @@ from .errors import (
 )
 from .webhook import verify_webhook
 
+try:
+    from importlib.metadata import version as _package_version
+
+    __version__ = _package_version("i2v-ai")
+except Exception:  # pragma: no cover - running from a source checkout
+    __version__ = "0.0.0"
+
 __all__ = [
     "DEFAULT_BASE_URL",
     "I2VClient",
@@ -21,5 +28,3 @@ __all__ = [
     "Result",
     "verify_webhook",
 ]
-
-__version__ = "0.1.0"
