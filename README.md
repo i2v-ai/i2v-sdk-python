@@ -8,10 +8,10 @@ Server-side Python client for the [i2v.ai](https://i2v.ai) image and video API. 
 ## Install
 
 ```bash
-pip install ./packages/python-sdk
+pip install i2v-ai
 ```
 
-The package is not on PyPI yet; install it from this repository until it is.
+Requires Python 3.10 or newer. The package is published at [pypi.org/project/i2v-ai](https://pypi.org/project/i2v-ai/). To work from a checkout instead, run `pip install ./packages/python-sdk`.
 
 ## Quickstart
 

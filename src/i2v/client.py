@@ -29,6 +29,7 @@ from .errors import (
 DEFAULT_BASE_URL = "https://api.i2v.ai"
 DEFAULT_TIMEOUT_SECONDS = 20.0
 DEFAULT_WAIT_SECONDS = 900.0
+USER_AGENT = "i2v-ai-python/0.1.0"
 
 _IDEMPOTENCY_KEY = re.compile(r"^[\x21-\x7e]{1,200}$")
 _USD_AMOUNT = re.compile(r"^(0|[1-9][0-9]*)(\.[0-9]{1,8})?$")
@@ -125,6 +126,7 @@ class I2VClient:
         data = json.dumps(body).encode("utf-8") if body is not None else None
         request = urllib.request.Request(url, data=data, method=method)
         request.add_header("Accept", "application/json")
+        request.add_header("User-Agent", USER_AGENT)
         if not public:
             if not self.api_key:
                 raise TypeError("An i2v.ai API key is required.")
