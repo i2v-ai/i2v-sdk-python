@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "i2v-ai"
+version = "0.1.0"
+description = "Server-side Python client for the i2v.ai image and video API."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "i2v.ai" }]
+keywords = ["i2v", "ai-video", "ai-image", "media-api"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "License :: OSI Approved :: MIT License",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://i2v.ai"
+Documentation = "https://i2v.ai/docs"
+Source = "https://github.com/i2v-ai/i2v-agent-tools"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
